@@ -1,0 +1,23 @@
+.index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.today {
+  article {
+    border: 1px solid red;
+  }
+
+  .imgBox {
+    border: 1px solid red;
+    width: 90%;
+    height: 90%;
+    position: relative;
+  }
+
+}
