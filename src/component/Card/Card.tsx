@@ -1,7 +1,7 @@
 import React, {memo, FC, useState, useEffect, useRef, useCallback, ReactNode} from 'react'
 import styles from "./Card.module.scss"
 import config from "~/core/constant";
-import useResizeWindow from "~/component/hooks/useResizeWindow";
+import useResizeWindow from "~/hooks/useResizeWindow";
 import classNames from "classnames";
 
 interface Props {

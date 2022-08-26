@@ -5,9 +5,10 @@ import Wrapper from "~/component/common/Wrapper/Wrapper";
 import styles from "./index.module.scss"
 import Card from "~/component/Card/Card";
 import RatioBox from "~/component/common/RatioBox/RatioBox";
+import Texts from "~/component/common/Texts/Texts";
 
 const Home: NextPage = () => {
-  console.log(process.env.NEXT_PUBLIC_TEST)
+
 
   return (
     <Layout>
@@ -18,16 +19,29 @@ const Home: NextPage = () => {
               <img src="" alt=""/>
             </div>
           </RatioBox>
+          <div className={styles.information}>
+            <Texts style={styles.text} size={100}>Canvas</Texts>
+          </div>
         </Card>
-        <Card>
+        <Card style={styles.today}>
           <RatioBox>
-
+            <div className={styles.imgBox}>
+              <img src="" alt=""/>
+            </div>
           </RatioBox>
+          <div className={styles.information}>
+            <Texts style={styles.text} size={100}>Youtube</Texts>
+          </div>
         </Card>
-        <Card>
+        <Card style={styles.today}>
           <RatioBox>
-
+            <div className={styles.imgBox}>
+              <img src="" alt=""/>
+            </div>
           </RatioBox>
+          <div className={styles.information}>
+            <Texts style={styles.text} size={100}>Log</Texts>
+          </div>
         </Card>
       </Wrapper>
     </Layout>

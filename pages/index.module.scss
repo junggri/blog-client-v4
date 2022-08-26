@@ -9,6 +9,9 @@
 }
 
 .today {
+  display: flex;
+  flex-direction: column;
+
   article {
     border: 1px solid red;
   }
@@ -20,4 +23,12 @@
     position: relative;
   }
 
+  .information {
+    flex-grow: 1;
+
+    .text {
+      text-align: center;
+
+    }
+  }
 }

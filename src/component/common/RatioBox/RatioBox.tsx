@@ -1,8 +1,8 @@
 import React, {memo, FC, useState, useRef, useEffect, ReactNode, useCallback} from 'react'
 import styles from "./RatioBox.module.scss"
-import useComputedStyle from "~/component/hooks/useComputedStyle";
+import useComputedStyle from "~/hooks/useComputedStyle";
 import classNames from "classnames";
-import useResizeWindow from "~/component/hooks/useResizeWindow";
+import useResizeWindow from "~/hooks/useResizeWindow";
 
 interface Props {
   children: ReactNode
