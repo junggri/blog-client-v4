@@ -6,6 +6,10 @@ import styles from "./index.module.scss"
 import Card from "~/component/Card/Card";
 import RatioBox from "~/component/common/RatioBox/RatioBox";
 import Texts from "~/component/common/Texts/Texts";
+import Canvas from "~/component/svg/canvas";
+import Youtube from "~/component/svg/youtube";
+import Log from "~/component/svg/log";
+import classNames from "classnames";
 
 const Home: NextPage = () => {
 
@@ -16,11 +20,10 @@ const Home: NextPage = () => {
         <Card style={styles.today}>
           <RatioBox>
             <div className={styles.imgBox}>
-              <img src="" alt=""/>
             </div>
           </RatioBox>
           <div className={styles.information}>
-            <Texts style={styles.text} size={100}>Canvas</Texts>
+            <Canvas styles={classNames(styles.svg, styles.canvas)}/>
           </div>
         </Card>
         <Card style={styles.today}>
@@ -30,7 +33,7 @@ const Home: NextPage = () => {
             </div>
           </RatioBox>
           <div className={styles.information}>
-            <Texts style={styles.text} size={100}>Youtube</Texts>
+            <Youtube styles={classNames(styles.svg, styles.youtube)}/>
           </div>
         </Card>
         <Card style={styles.today}>
@@ -40,7 +43,7 @@ const Home: NextPage = () => {
             </div>
           </RatioBox>
           <div className={styles.information}>
-            <Texts style={styles.text} size={100}>Log</Texts>
+            <Log styles={classNames(styles.svg, styles.log)}/>
           </div>
         </Card>
       </Wrapper>

@@ -25,10 +25,30 @@
 
   .information {
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .text {
-      text-align: center;
+    .svg {
+      fill: transparent;
+      stroke: #212529;;
+      stroke-width: 1.5;
+      //border: 1px solid red;
+      //padding: 2px;
+    }
 
+    .canvas {
+      width: 65%;
+    }
+
+    .youtube {
+      width: 80%;
+      stroke-width: 1.2;
+    }
+
+    .log {
+      width: 40%;
+      stroke-width: 4;
     }
   }
 }
