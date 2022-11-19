@@ -1,47 +1,16 @@
 import React, {memo, FC, useRef, useEffect} from 'react'
 import style from "./canvas.module.scss"
 import classNames from "classnames";
+import useAnimateSvg from "~/hooks/useAnimateSvg";
 
 interface Props {
   styles?: string
+  className: string
 }
 
-const Canvas: FC<Props> = memo(({styles}) => {
+const Canvas: FC<Props> = memo(({styles, className}) => {
   const svg = useRef<SVGSVGElement | null>(null)
-
-  useEffect(() => {
-    if (!svg.current) return
-    const paths = svg.current.childNodes[0].childNodes;
-
-    paths.forEach((e) => {
-      const length = (e as SVGPathElement).getTotalLength();
-      (e as SVGPathElement).style.strokeDasharray = String(length);
-      (e as SVGPathElement).style.strokeDashoffset = String(length);
-
-      (e as SVGPathElement).classList.add("draw")
-
-      const keyframes = document.createElement('style');
-
-      keyframes.innerHTML = `
-        @keyframes draw {
-          from {
-             stroke-dashoffset: ${length};
-          }
-          to {
-             stroke-dashoffset: 0;
-          }
-        }
-      
-        .draw {
-          animation: draw 1s ease infinite;
-        }
-      `;
-
-      // e.appendChild(keyframes)
-    })
-
-
-  }, [svg])
+  useAnimateSvg(svg, className)
 
   return (
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209 50.5" className={classNames(styles)} ref={svg}>

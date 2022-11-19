@@ -13,11 +13,9 @@
   flex-direction: column;
 
   article {
-    border: 1px solid red;
   }
 
   .imgBox {
-    border: 1px solid red;
     width: 90%;
     height: 90%;
     position: relative;
@@ -28,14 +26,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     .svg {
       fill: transparent;
       stroke: #212529;;
-      stroke-width: 1.5;
-      //border: 1px solid red;
-      //padding: 2px;
     }
+
+    stroke-width: 1.5;
 
     .canvas {
       width: 65%;

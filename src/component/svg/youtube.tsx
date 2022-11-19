@@ -1,14 +1,19 @@
-import React, {memo, FC} from 'react'
-import styles from "./youtube.module.scss"
+import React, {memo, FC, useRef} from 'react'
 import classNames from "classnames";
+import useAnimateSvg from "~/hooks/useAnimateSvg";
 
 interface Props {
   styles?: string
+  className: string
 }
 
-const Youtube: FC<Props> = memo(({styles}) => {
+const Youtube: FC<Props> = memo(({styles, className}) => {
+  const svg = useRef<SVGSVGElement | null>(null)
+  useAnimateSvg(svg, className);
+
+
   return (
-    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209 40.5" className={classNames(styles)}>
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209 40.5" className={classNames(styles)} ref={svg}>
       <g>
         <path d="M30.39,2.02l-11.44,19.44v17.26h-5.59V21.46L1.93,2.02h6.46l7.77,13.18L23.92,2.02h6.46Z"/>
         <path

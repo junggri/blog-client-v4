@@ -14,8 +14,10 @@ const RatioBox: FC<Props> = memo(({children}) => {
 
 
   const setComputedLength = useCallback(() => {
-    const width = useComputedStyle(ref.current)
-    setLength(width)
+    const style = useComputedStyle(ref.current);
+    if (style) {
+      setLength(style.width)
+    }
   }, [length])
 
   useEffect(() => {
