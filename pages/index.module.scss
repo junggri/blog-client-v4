@@ -1,0 +1,52 @@
+.index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.today {
+  display: flex;
+  flex-direction: column;
+
+  article {
+  }
+
+  .imgBox {
+    width: 90%;
+    height: 90%;
+    position: relative;
+  }
+
+  .information {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .svg {
+      fill: transparent;
+      stroke: #212529;;
+    }
+
+    stroke-width: 1.5;
+
+    .canvas {
+      width: 65%;
+    }
+
+    .youtube {
+      width: 80%;
+      stroke-width: 1.2;
+    }
+
+    .log {
+      width: 40%;
+      stroke-width: 4;
+    }
+  }
+}
