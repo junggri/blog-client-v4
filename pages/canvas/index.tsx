@@ -1,14 +1,17 @@
 import React, {memo, FC} from 'react'
 import styles from "./canvas.module.scss"
+import Layout from "~/component/common/Layout/Layout";
 
 interface Props {
 }
 
 const index: FC<Props> = memo(() => {
   return (
-    <div className={styles.canvas}>
+    <Layout>
+      <div className={styles.canvas}>
 
-    </div>
+      </div>
+    </Layout>
   )
 });
 
