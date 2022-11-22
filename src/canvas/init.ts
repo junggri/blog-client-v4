@@ -1,3 +1,5 @@
+import {useRouter} from "next/router";
+
 export class InitCanvas {
   public stageWidth: number = 0
   public stageHeight: number = 0
@@ -23,6 +25,4 @@ export class InitCanvas {
       }
     }
   }
-
-  
 }
