@@ -8,8 +8,8 @@ class MyDocument extends Document {
       <Html lang="ko">
         <Head>
           {/*<link rel="icon" href="https://www.junggri.com/images/Logo.ico"/>*/}
-          {/*변경*/}
           <meta charSet="utf-8"/>
+          {/*변경*/}
           <meta name="keywords" content="정그리, junggri"/>
           <script
             data-ad-client="ca-pub-6475394953521607"

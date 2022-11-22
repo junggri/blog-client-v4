@@ -37,16 +37,20 @@
 
     .canvas {
       width: 65%;
+      filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
     }
 
     .youtube {
       width: 80%;
       stroke-width: 1.2;
+      filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
     }
+
 
     .log {
       width: 40%;
       stroke-width: 4;
+      filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
     }
   }
 }
